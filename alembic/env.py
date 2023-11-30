@@ -7,7 +7,7 @@ from alembic import context
 
 from app.db import Base
 from app.settings.settings import DATABASE_URL
-from app.models.models import Character
+from app.models.models import Card
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
