@@ -5,7 +5,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from sqlalchemy.orm import sessionmaker
 from app.db import engine
-from app.models.models import Character
+from app.models.models import Card
 
 env_path = Path('', '.env')
 load_dotenv(dotenv_path=env_path)
@@ -33,7 +33,7 @@ def get_list_of_character(character_data):
     characters_info_list = []
 
     for character in character_data:
-        character_inf_for_db = Character(
+        character_inf_for_db = Card(
             id=character['id'],
             name=character['name'],
             description=character['description'],
